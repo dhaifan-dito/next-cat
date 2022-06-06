@@ -24,3 +24,32 @@ a {
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
+
+.flex-even-30 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px;
+}
+
+.flex-around-80 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:80%;
+}
+
+.flex-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.margin20{
+  margin: 20px;
+}
+
+.marginBottom10{
+  margin-bottom: 10px;
+}

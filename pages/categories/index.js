@@ -11,21 +11,21 @@ function Categories() {
     const { loading, error, data } = useQuery(GET_CATEGORIES);
 
     if (loading) return (
-        <div align="center" style={{margin:'20px'}}>
+        <div align="center" className="margin20">
         <Skeleton align='center' variant="rect" width={210} height={40} />
-        <div className='grid-4' style={{margin:'20px'}}>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
-      <Skeleton variant="rect" width={210} height={50} align="center" style={{marginBottom:'10px'}}/>
+        <div className='grid-4 margin20'>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
+      <Skeleton variant="rect" width={210} height={50} align="center" className="marginBottom10"/>
       </div>
         </div>
     );
@@ -36,13 +36,13 @@ function Categories() {
   return (
     <div>
         <h2 align='center'>Queries</h2>
-        <div className="grid-4" style={{margin:'20px'}}>
+        <div className="grid-4 margin20">
         {
             data.categories.items && data.categories.items.map((item)=>{
                 return (
                     <Link href={`/categories/${item.id}`} key={item.id}>
                         <div align='center'>
-                        <Button  className={classes.root} style={{marginBottom:'10px', width:'80%'}}>{item.name}</Button>
+                        <Button  className={classes.root} style={{width:'80%', marginBottom:"10px"}}>{item.name}</Button>
                         </div>
                     </Link>
                 )

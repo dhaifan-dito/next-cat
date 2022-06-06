@@ -18,7 +18,7 @@ export default function Home() {
       <h1>Welcome!</h1>
       
 
-      <div style={{display:'flex', justifyContent:'space-evenly', alignItems:'center', margin:'30px'}}>
+      <div className='flex-even-30'>
       <Link href='/categories'><Button className={classes.root} >Categories</Button></Link>
       <Link href='/categories/lazy'><Button className={classes.root}>Lazy Categories</Button></Link>
       </div>

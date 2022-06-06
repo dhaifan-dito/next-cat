@@ -33,7 +33,7 @@ function CategoryDetail() {
     <div>
         <h2>Detail Category</h2>
         <p>Products of <span style={{fontWeight:'bold'}}>{category?.name}</span> category</p>
-        <div style={{display:'grid', gridTemplateColumns:'auto auto auto auto', margin:'20px'}}>
+        <div className="grid-4 margin20">
         {
             product?.map((item)=>{
                 return (
@@ -42,7 +42,7 @@ function CategoryDetail() {
                         <div align="center">
                         <Image src={item.image.url} alt={ListItemAvatar.name} width={100} height={100}/>
                         </div>
-                        <Button className={classes.root} align='center'  style={{marginBottom:'10px', width:'80%'}}>{item.name}</Button>
+                        <Button className={classes.root} align='center' style={{width:'80%', marginBottom:"10px"}}>{item.name}</Button>
                         </div>
                     </Link>
                 )

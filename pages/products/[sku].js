@@ -26,11 +26,11 @@ function ProductDetail() {
       
   return (
     <div>
-       <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+       <div className='flex-column'>
         <h2 >{product?.name}</h2>
-        <div style={{display:'flex', alignItems:'center', justifyContent:'space-around', width:'80%'}}>
+        <div className='flex-around-80'>
         <Image src={product ? product?.image.url : "/vercel.svg"} alt={product?.name} width={300} height={300}/>
-        <div style={{display:'flex', flexDirection:'column'}}>
+        <div className='flex-column'>
         <div dangerouslySetInnerHTML={{ __html: product?.description.html }} />
         <h3 style={{color:'darkred'}}>{price?.currency} {price?.value}</h3>
         </div>
